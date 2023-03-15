@@ -1,0 +1,27 @@
+{
+  "title": "Setting up the environment for Killercoda KLT demo",
+  "description": "Let users wrap a standard Kubernetes deployment and provides both workload (single service) tests and SLO evaluations.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Create a pod",
+        "text": "step1/text.md",
+        "verify": "step1/check.sh"
+      },
+      {
+        "title": "Delete a pod",
+        "text": "step2/text.md",
+        "verify": "step2/check.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1nodes"
+  }
+}

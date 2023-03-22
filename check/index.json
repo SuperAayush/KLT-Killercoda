@@ -3,7 +3,8 @@
   "description": "Let users wrap a standard Kubernetes deployment and provides both workload (single service) tests and SLO evaluations.",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "title":"Install Keptn Lifecycle Toolkit",
+      "text": "intro/intro.md"
     },
     "steps": [
       {

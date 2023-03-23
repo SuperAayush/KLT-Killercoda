@@ -33,3 +33,7 @@ To check the version just run:
 `kubectl version`{{exec}}
 
 
+<<<<<<< HEAD
+=======
+`kubectl apply -f https://github.com/keptn/lifecycle-toolkit/releases/download/v0.5.0/manifest.yaml`{{exec}}
+>>>>>>> origin/main

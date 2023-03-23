@@ -1,11 +1,10 @@
 {
-  "title": "Setting up the environment for Killercoda KLT demo",
+  "title": "Setting up the environment for Keptn Lifecycle Toolkit",
   "description": "Let users wrap a standard Kubernetes deployment and provides both workload (single service) tests and SLO evaluations.",
   "details": {
     "intro": {
-      "title":"Install Keptn Lifecycle Toolkit",
-      "text": "intro/intro.md",
-      "verify": "intro/foreground.sh"
+      "title":"Getting Started",
+      "text": "intro/intro.md"
     },
     "steps": [
       {

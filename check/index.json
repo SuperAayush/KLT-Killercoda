@@ -5,7 +5,7 @@
     "intro": {
       "title":"Install Keptn Lifecycle Toolkit",
       "text": "intro/intro.md",
-      "verify": "intro/verify.sh"
+      "verify": "intro/foreground.sh"
     },
     "steps": [
       {

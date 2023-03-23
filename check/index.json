@@ -8,7 +8,7 @@
     },
     "steps": [
       {
-        "title": "Create a pod",
+        "title": "Install the Keptn Lifecycle Toolkit",
         "text": "step1/text.md",
         "verify": "step1/check.sh"
       },

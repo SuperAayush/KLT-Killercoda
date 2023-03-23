@@ -25,9 +25,19 @@ Use post-deployment tasks on an application level to send a notification
 
 ## Requirements 
 
-A kubernetes cluster of more than the 1.24 version and kubectl installed
+A kubernetes cluster of more than or equal to 1.24 version and kubectl installed
 In this demo we already have this configured.
 
 To check the version just run:
 
-`kubectl version --short`{{exec}}
+`kubectl version`{{exec}}
+
+The output should be of the format:
+
+`$ kubectl version --short
+Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
+Client Version: v1.24.0
+Kustomize Version: v4.5.4
+Server Version: v1.24.0 `
+
+Here we are at the end of the introduction and ready to begin with the real fun. 

@@ -30,7 +30,7 @@ In this demo we already have this configured.
 
 To check the version just run:
 
-`kubectl version`{{exec}}
+`kubectl version --short`{{exec}}
 
 The output should be of the format:
 
@@ -40,4 +40,4 @@ Client Version: v1.24.0
 Kustomize Version: v4.5.4
 Server Version: v1.24.0 `
 
-Here we are at the end of the introduction and ready to begin with the real fun. 
+## Here we are at the end of the introduction and ready to begin with the real fun. 

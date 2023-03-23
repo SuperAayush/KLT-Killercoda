@@ -11,11 +11,6 @@
         "title": "Install the Keptn Lifecycle Toolkit",
         "text": "step1/text.md",
         "verify": "step1/foreground.sh"
-      },
-      {
-        "title": "Delete a pod",
-        "text": "step2/text.md",
-        "verify": "step2/check.sh"
       }
     ],
     "finish": {

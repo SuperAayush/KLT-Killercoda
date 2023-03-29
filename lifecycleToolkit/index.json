@@ -10,6 +10,10 @@
       {
         "title": "Install the Keptn Lifecycle Toolkit",
         "text": "step1/text.md"
+      },
+      {
+        "title": "Install the required observability features",
+        "text": "step2/text.md"
       }
     ],
     "finish": {

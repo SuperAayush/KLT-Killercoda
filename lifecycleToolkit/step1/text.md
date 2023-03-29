@@ -5,8 +5,9 @@ In this step we will install the Lifecycle Toolkit and set up a simple app to te
 ## Install the Keptn Lifecycle Toolkit 
 
 ```
-kubectl apply -f https://github.com/keptn/lifecycle-toolkit/releases/download/v0.5.0/manifest.yaml
-kubectl wait --for=condition=Available deployment/klc-controller-manager -n keptn-lifecycle-toolkit-system --timeout=120s
+helm repo add klt https://charts.lifecycle.keptn.sh
+helm repo update
+helm upgrade --install keptn klt/klt -n keptn-lifecycle-toolkit-system --create-namespace --wait
 ```{{exec}}
 
 ## Set the demo app

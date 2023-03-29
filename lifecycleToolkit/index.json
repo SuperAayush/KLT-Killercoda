@@ -15,6 +15,11 @@
         "title": "Install the required observability features",
         "text": "step2/text.md"
       }
+      ,
+      {
+        "title": "Install the Demo application",
+        "text": "step3/text.md"
+      }
     ],
     "finish": {
       "text": "finish.md"

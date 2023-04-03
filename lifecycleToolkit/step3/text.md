@@ -33,7 +33,7 @@ Although you didn't specify an application in your manifest, the Lifecycle Toolk
 
 ### Checking the status of the app after making second deployment
 
-`kubectl get keptnappversions -A -owide`{{exec}}
+`kubectl get pods -n podtato-kubectl`{{exec}}
 
 ### Checking the status of both the apps
 

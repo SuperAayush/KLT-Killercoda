@@ -14,8 +14,8 @@ helm upgrade --install keptn klt/klt -n keptn-lifecycle-toolkit-system --create-
 For the further progress of this demo, we need a sample application as well as some helpers which make it easier for your to set up your environment. These things can be found in our Getting Started repository which can be checked out as follows:
 
 ```
-git clone https://github.com/keptn/lifecycle-toolkit
-cd lifecycle-toolkit/examples
+git clone https://github.com/keptn-sandbox/lifecycle-toolkit-examples.git
+cd lifecycle-toolkit-examples
 ```{{exec}}
 
 ## You are done with the setting up for Lifecycle Toolkit and the demo app

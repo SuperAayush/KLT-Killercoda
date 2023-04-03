@@ -17,3 +17,24 @@ In the first version of the Demo application, the Keptn Lifecycle Toolkit evalua
 To install it, simply apply the manifest:
 
 `make deploy-version-1`{{exec}}
+
+### Watch workload state
+When the Lifecycle Toolkit detects workload labels (“app.kubernetes.io/name” or “keptn.sh/workload”) on a resource, a KeptnWorkloadInstance (kwi) resource is created. Using this resource you can watch the progress of the deployment.
+
+`kubectl get keptnworkloadinstances -n podtato-kubectl`{{exec}}
+
+### Watch application state
+Although you didn't specify an application in your manifest, the Lifecycle Toolkit assumes that this is a single-service application and creates an ApplicationVersion (kav) resource for you.
+`kubectl get pods -n podtato-kubectl`{{exec}}
+
+### Deploy the second version of the app
+
+`make deploy-version-2`{{exec}}
+
+### Checking the status of the app after making second deployment
+
+`kubectl get keptnappversions -A -owide`{{exec}}
+
+### Checking the status of both the apps
+
+`kubectl get keptnappversions -A -owide`{{exec}}

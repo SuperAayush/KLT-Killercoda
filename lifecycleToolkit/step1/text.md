@@ -18,4 +18,4 @@ git clone https://github.com/keptn-sandbox/lifecycle-toolkit-examples.git
 cd lifecycle-toolkit-examples
 ```{{exec}}
 
-## You are done with the setting up for Lifecycle Toolkit and the demo app
+##  You are done with the setting up for Lifecycle Toolkit and the demo app

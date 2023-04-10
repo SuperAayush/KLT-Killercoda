@@ -25,7 +25,7 @@ Use post-deployment tasks on an application level to send a notification
 
 ## Requirements 
 
-A kubernetes cluster of more than or equal to 1.24 version and kubectl installed
+Keptn Lifecycle Toolkit requires a kubernetes cluster of more than or equal to 1.24 version and kubectl installed to come into action.
 In this demo we already have this configured.
 
 To check the version just run:
@@ -34,10 +34,10 @@ To check the version just run:
 
 The output should be of the format:
 
-`$ kubectl version --short
-Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
-Client Version: v1.24.0
-Kustomize Version: v4.5.4
-Server Version: v1.24.0 `
+`Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
+Client Version: v1.26.1
+Kustomize Version: v4.5.7
+Server Version: v1.26.1 `
 
+As you see the version above is 1.26 which is the version provided by the killercoda envirnoment which might change with time and might be different from the above desired output, but as long as the version is above 1.24 you are good to go.
 ## Here we are at the end of the introduction and ready to begin with the real fun. 

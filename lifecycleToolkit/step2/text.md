@@ -8,9 +8,9 @@ In order to use the observability features of the lifecycle toolkit, we need a m
 
 In this guide, we use:
 
-Prometheus for Metrics
-Jaeger for Traces
-Grafana for Dashboarding
+- Prometheus for Metrics
+- Jaeger for Traces
+- Grafana for Dashboarding
 
 ### Install these with the following commands:
 

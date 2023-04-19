@@ -1,6 +1,6 @@
 {
   "title": "Setting up the environment for Keptn Lifecycle Toolkit",
-  "description": "Let users wrap a standard Kubernetes deployment and provides both workload (single service) tests and SLO evaluations.",
+  "description": "Toolkit for cloud-native application lifecycle management.",
   "details": {
     "intro": {
       "title":"Getting Started",

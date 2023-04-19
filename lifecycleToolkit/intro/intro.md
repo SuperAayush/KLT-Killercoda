@@ -1,10 +1,9 @@
 <br>
 
-# Toolkit for cloud-native application lifecycle management
 
-# What is Keptn Lifecycle Tookit (KLT)
+# What is Keptn Lifecycle Tookit (KLT):
 
-The Keptn Lifecycle Toolkit (KLT) “wraps” a standard Kubernetes deployment and provides both workload (single service) tests and SLO evaluations. Multiple workloads can also be logically grouped (and evaluated) as a single cohesive unit: a Keptn Application. In other words, an application is a collection of multiple workloads.
+It is a toolkit for cloud-native application lifecycle management. The Keptn Lifecycle Toolkit (KLT) “wraps” a standard Kubernetes deployment and provides both workload (single service) tests and SLO evaluations. Multiple workloads can also be logically grouped (and evaluated) as a single cohesive unit: a Keptn Application. In other words, an application is a collection of multiple workloads.
 
 The Keptn Lifecycle Toolkit is a tool and vendor-neutral mechanism - it does not depend on particular GitOps tooling - ArgoCD, Flux, Gitlab or others - KLT works with them all.
 
@@ -16,13 +15,13 @@ Available steps (applicable to both workload and application entities):
 - Pre-Deployment Evaluations: e.g. evaluate metrics before your application gets deployed (e.g. layout of the cluster)
 
 
-# Things to learn in this demo:
+# This demo covers:
 
 - Use the Keptn Lifecycle Toolkit to control the deployment of your application
 - Connect the lifecycle-toolkit to Prometheus
 - Use pre-deployment tasks to check if a dependency is met before deploying a workload
 
-# Requirements 
+# Requirements:
 
 Keptn Lifecycle Toolkit requires a kubernetes cluster of more than or equal to 1.24 version and kubectl installed to come into action.
 In this demo we already have this configured.

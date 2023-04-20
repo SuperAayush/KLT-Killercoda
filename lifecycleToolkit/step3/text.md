@@ -27,14 +27,3 @@ When the Lifecycle Toolkit detects workload labels (“app.kubernetes.io/name”
 Although you didn't specify an application in your manifest, the Lifecycle Toolkit assumes that this is a single-service application and creates an ApplicationVersion (kav) resource for you.
 `kubectl get pods -n podtato-kubectl`{{exec}}
 
-### Deploy the second version of the app
-
-`make deploy-version-2`{{exec}}
-
-### Checking the status of the app after making second deployment
-
-`kubectl get pods -n podtato-kubectl`{{exec}}
-
-### Checking the status of both the apps
-
-`kubectl get keptnappversions -A -owide`{{exec}}

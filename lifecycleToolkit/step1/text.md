@@ -1,6 +1,6 @@
 
 <br>
-In this step we will install the Lifecycle Toolkit and set up a simple app to test the app with all the tests.
+This is the initial step in which we will fetch a demo app 
 
 ## Install the Keptn Lifecycle Toolkit 
 

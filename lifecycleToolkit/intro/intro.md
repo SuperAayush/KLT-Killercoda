@@ -21,6 +21,13 @@ Available steps (applicable to both workload and application entities):
 - Connect the lifecycle-toolkit to Prometheus
 - Use pre-deployment tasks to check if a dependency is met before deploying a workload
 
+# The demo is divided into steps:
+
+1.  Install the Keptn Lifecycle Toolkit
+2. Install the required observability features
+3. Install the first version of demo application
+4. Install the second version of demo application
+
 # Requirements:
 
 Keptn Lifecycle Toolkit requires a kubernetes cluster of more than or equal to 1.24 version and kubectl installed to come into action.

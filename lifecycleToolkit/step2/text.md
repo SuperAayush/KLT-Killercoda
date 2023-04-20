@@ -14,7 +14,7 @@ In this guide, we use:
 
 # Install these with the following commands:
 
-To get all the required details before making the deployement we need to get different observability data, the following command does the following steps:
+To get all the required details before making the deployement we need to get different observability data, running this command might take a little while to complete processing. The following command does the following steps:
 
 - Create Namespace and install CertManager
 - Create Namespace and install Jaeger
@@ -28,4 +28,4 @@ After all these steps are completed restart the Lifecycle Toolkit using:
 
 `make restart-lifecycle-toolkit`{{exec}}
 
-## We are all set to make our first deployement of the demo. 
+## We are all set to make our first deployment of the demo. 

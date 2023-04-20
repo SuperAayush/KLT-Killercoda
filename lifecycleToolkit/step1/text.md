@@ -13,6 +13,10 @@ helm repo update
 helm upgrade --install keptn klt/klt -n keptn-lifecycle-toolkit-system --create-namespace --wait
 ```{{exec}}
 
+Now check the status of the namespace if it is deployed or not by running:
+
+`helm list -A`{{exec}}
+
 # Fetch Demo Applications:
 
 For the further progress of this demo, we need a sample applications as well as some helpers which make it easier for you to set up your environment. These things can be found in our Getting Started repository which can be checked out as follows:

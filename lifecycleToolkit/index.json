@@ -1,27 +1,32 @@
 {
-  "title": "Setting up the environment for Keptn Lifecycle Toolkit",
+  "title": "Keptn Lifecycle Toolkit WIP",
   "description": "Toolkit for cloud-native application lifecycle management.",
   "details": {
     "intro": {
-      "title":"Getting Started",
-      "text": "intro/intro.md"
+      "title":"Introduction to KLT",
+      "text": "intro/intro.md",
+      "foreground": "assets/scripts/intro_foreground.sh"
     },
     "steps": [
       {
-        "title": "Install the Keptn Lifecycle Toolkit",
+        "title": "Deploy v1",
         "text": "step1/text.md"
       },
       {
-        "title": "Install the required observability features",
+        "title": "How KLT Works",
         "text": "step2/text.md"
       },
       {
-        "title": "Deploy the Demo application (Version 1)",
+        "title": "Step 3",
         "text": "step3/text.md"
       },
       {
-        "title": "Deploy the Demo application (Version 2)",
+        "title": "Step 4",
         "text": "step4/text.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5/text.md"
       }
     ],
     "finish": {

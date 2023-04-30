@@ -1,23 +1,58 @@
-<br>
-In this section of the demo we will try to deploy the second version of the application and try to pass all the evaluations to make the application running.
-<br>
+## Deploy Version 2
 
-# Deploy the Demo Application (Version 2)
+```
+make deploy-version-2
+```{{exec}}
 
-`make deploy-version-2`{{exec}}
+It will take a few moments for the frontend to start and until that time, the pre-deploy checks for the other pods will error and the other pods will stay pending.
 
-# Checking the status of the pods after making second deployment
-After making the second deployment of the application when you hit the following the command you will notice that the creation of the pre-deployment check containers begins.
+After a few moments, all pods should start successfully.
 
-`kubectl get pods -n podtato-kubectl`{{exec}}
+```
+kubectl -n podtato-kubectl get pods
+```{{exec}}
 
-After the processing of the command is completed we see on the terminal that creation of keptn pre-deployement check containers is completed and all the pods of the application starts running.
+should look like this:
 
-# Checking the status of both the applications
+```
+NAME                                        READY   STATUS      RESTARTS   AGE
+klc-pre-pre-deployment-check--77384-6hnlt   0/1     Completed   3          2m49s
+klc-pre-pre-deployment-check--79731-zzpn5   0/1     Completed   2          2m44s
+klc-pre-pre-deployment-check--80182-2c9cp   0/1     Completed   2          2m48s
+podtato-head-frontend-5d4dc47-94bbl         1/1     Running     0          11m
+podtato-head-hat-d5f5d5f64-sm2ck            1/1     Running     0          11m
+podtato-head-left-arm-7775846574-zpjzr      1/1     Running     0          11m
+podtato-head-right-arm-66878d7d9b-8thbh     1/1     Running     0          11m
+```{{}}
 
-Now to check the details regarding the pre-deployment of the two versions of the applications we run the following command:
+## What is Different?
 
-`kubectl get keptnappversions -A -owide`{{exec}}
+Version two has one crucial difference.
 
-In the output we see that the first version pre-deployment evaluations fails while the second version is succeeded.
+Try to find out why version 2 is allowed to start (hint: `KeptnEvaluationDefinition`{{copy}} called `app-pre-deploy-eval-2`{{copy}}).
+
+## Explanation
+
+Version 2 of the `KeptnApp`{{}} has a different pre-evaluation check configured.
+
+```
+cat ~/lifecycle-toolkit-examples/sample-app/version-2/app.yaml
+```{{exec}}
+
+The definition shows that the `evaluationTarget`{{}} for `available-cpus`{{}} has been lowered from `>100`{{}} to `>1`{{}},
+
+Look for the `Evaluation Target`{{}} in the output of this command:
+
+```
+kubectl -n podtato-kubectl describe keptnevaluationdefinition app-pre-deploy-eval-2
+```{{exec}}
+
+Retrieving the metric shows the current value to be `4`{{}}
+
+```
+kubectl -n podtato-kubectl get keptnmetrics
+```{{exec}}
+
+The pre-condition check is **met** and so the pods are allowed to be bound to the node.
+
 

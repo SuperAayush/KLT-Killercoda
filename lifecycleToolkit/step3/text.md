@@ -1,38 +1,41 @@
-<br>
+## Putting It All Together
 
-# The Demo Application
-For this demonstration, we use a slightly modified version of the PodTatoHead application.
+Version 1 of the application has been deployed. A pre-deployment task is defined on each workload (except frontend) which forces each workload to wait until the frontend is first running.
 
-Over time, we will evolve this application from a simple manifest to a Keptn-managed application:
+A pre-deployment evaluation is defined at the KeptnApp level which retrieves the `available-cpus`{{}} metric from `prometheus`{{}} and ensures that the number of available CPUs is greater than `100`{{}}.
 
-We install it with kubectl then add pre and post deployment tasks.
-For this, we check if the entry service is available before the other services are scheduled.
-We then add evaluations to ensure that our infrastructure is in good shape before we deploy the application.
-Finally, we evolve to a GitOps driven deployment and notify an external webhook service when the deployment has finished.
+**If this check fails, all of the pods in the KeptnApp will not be allowed to be scheduled and remain in a pending state.**
 
-# Deploy the Demo Application (Version 1)
-In the first version of the Demo application, the Keptn Lifecycle Toolkit evaluates metrics provided by Prometheus and checks if the specified amount of CPUs are available before deploying the application
+## Why is it Pending?
 
-To install it, simply apply the manifest:
+```
+kubectl -n podtato-kubectl get pods
+```{{exec}}
 
-`make deploy-version-1`{{exec}}
+Shows that all pods are pending. Why?
 
-# Watch workload state
-When the Lifecycle Toolkit detects workload labels (“app.kubernetes.io/name” or “keptn.sh/workload”) on a resource, a KeptnWorkloadInstance (kwi) resource is created. Using this resource you can watch the progress of the deployment.
+Because the pre-deployment task failed. 
 
-`kubectl get keptnworkloadinstances -n podtato-kubectl`{{exec}}
+You can check the status of any `KeptnApp`{{}} with this command:
 
-# Watch application state
-Although you didn't specify an application in your manifest, the Lifecycle Toolkit assumes that this is a single-service application and creates an ApplicationVersion (kav) resource for you.
+```
+kubectl -n podtato-kubectl get keptnappversions -o wide
+```{{exec}}
 
-`kubectl get pods -n podtato-kubectl`{{exec}}
+Notice that the `predeploymentevaluationstatus`{{}} is `failed`{{}}
 
-After running the above command you will notice that the pod status shows that all the pods are in pending state. This shows that the pre-deployement evaluations for version 1 of the demo application fails.
+Recall that the pre-evaluation step is checking a metric called `available-cpus`{{}} to ensure the value is `>100`. You can see the actual value of the metric with this command (look for the `.Status.Value`{{}} field):
 
-To check the status of pre-deployment status of the current version, use the following command:
+```
+kubectl -n podtato-kubectl describe keptnmetric available-cpus
+```{{exec}}
 
-`kubectl get keptnappversions -A -owide` {{exec}}
+The system does not have > 100 CPUs available, it has 4. The pre-deployment check failed and so the pods are still pending.
 
-In the output you will notice that the pre-deployment status is completed but the pre-deployment evaluations are failed for the `podtato-head-0.1.1-1` application.
+**This is the desired behaviour.**
 
-## In the next and final step we will fix the errors and finally make the application running
+As previously explained, in a real scenario you would use pre-checks to ensure your infrastructure is ready and capable of the upcoming deployment, downstream systems or third parties are operational before allowing a deployment.
+
+Version 1 of the demo application simulates a scenario whereby you **should not** be allowed to deploy.
+
+KLT has **protected the cluster by preventing the deployment** because we do not have the desired resources.

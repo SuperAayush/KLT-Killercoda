@@ -59,7 +59,7 @@ cat ~/lifecycle-toolkit-examples/sample-app/base/app.yaml
 
 ## Step 4: Pre and Post Deployment Actions
 
-KLT allows two types of pre and post deployment action on both the (individual) workload level and at the KeptnApp level:
+KLT allows two types of pre and post deployment actions on both the (individual) workload level and at the KeptnApp level:
 
 - [KeptnTaskDefinitions](https://lifecycle.keptn.sh/docs/concepts/tasks/)
 - [KeptnEvaluationDefinitions](https://lifecycle.keptn.sh/docs/concepts/evaluations/)
@@ -90,7 +90,7 @@ Looking at the `v1`{{}} manifest, notice a label applied to each workload:
 
 ```
 keptn.sh/pre-deployment-tasks: pre-deployment-check-frontend
-```{{copy}}
+```{{}}
 
 View the file by clicking this text:
 

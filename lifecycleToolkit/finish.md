@@ -8,4 +8,4 @@ You have:
 
 - Dig deeper by [reading the official documentation](https://lifecycle.keptn.sh).
 - Need help? Ask in the [Keptn Slack channel](https://slack.keptn.sh) of [#keptn in the CNCF Slack channel](https://cloud-native.slack.com/archives/C017GAX90GM).
-- Found a bug or issue? [Create an issue on GitHub](https://github.com/SuperAayush/KLT-Killercoda/issues/new)
+- Found a bug or issue in this tutorial? [Create an issue on GitHub](https://github.com/SuperAayush/KLT-Killercoda/issues/new)

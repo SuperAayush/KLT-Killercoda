@@ -14,17 +14,15 @@ kubectl -n podtato-kubectl get pods
 
 Shows that all pods are pending. Why?
 
-Because the pre-deployment task failed. 
-
 You can check the status of any `KeptnApp`{{}} with this command:
 
 ```
 kubectl -n podtato-kubectl get keptnappversions -o wide
 ```{{exec}}
 
-Notice that the `predeploymentevaluationstatus`{{}} is `failed`{{}}
+Notice that the predeploymentevaluationstatus is failed.
 
-Recall that the pre-evaluation step is checking a metric called `available-cpus`{{}} to ensure the value is `>100`. You can see the actual value of the metric with this command (look for the `.Status.Value`{{}} field):
+Recall that the pre-evaluation step is checking a metric called `available-cpus`{{}} to ensure the value is `>100`{{}}. You can see the actual value of the metric with this command (look for the `.Status.Value`{{}} field):
 
 ```
 kubectl -n podtato-kubectl describe keptnmetric available-cpus
